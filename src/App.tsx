@@ -25,6 +25,7 @@ const team = [
   { name: "Design", icon: "assets/brand/icon-03.png" },
   { name: "Audiovisual", icon: "assets/brand/icon-04.png" },
   { name: "Experiência", icon: "assets/brand/icon-05.png" },
+  { name: "Eventos", icon: "assets/brand/icon-06.png" },
 ];
 
 const backgroundWaves = [
@@ -272,7 +273,7 @@ function App() {
                 <div className="md:col-span-2 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                     <span className="inline-flex items-center gap-2">
-                      <Mail size={16} /> noise@agencia.com
+                      <Mail size={16} /> noisy@agencia.com
                     </span>
                     <span className="inline-flex items-center gap-2">
                       <Phone size={16} /> +55 11 99999-0000
@@ -294,7 +295,7 @@ function App() {
         </section>
 
         <footer className="text-center text-xs text-muted-foreground pb-8 space-y-3">
-          <p>Rua Criativa, 321 - São Paulo</p>
+          <p>Rua Luz Interior, Juiz de Fora</p>
           <p className="flex items-center justify-center gap-2 text-soft">
             <span className="size-2 rounded-full bg-accent" />
             Feito com barulho pela Noisy
