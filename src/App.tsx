@@ -137,7 +137,7 @@ function App() {
 
         <section className="max-w-5xl mx-auto px-6 md:px-10 py-12 text-center space-y-8">
           <h2 className="text-3xl md:text-4xl font-display tracking-tight">
-            Nossos serviços
+            Nossos trabalhos
           </h2>
           <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-center">
             <Card className="bg-gradient-to-br from-secondary/80 via-secondary/60 to-primary/40 border-primary/30">
