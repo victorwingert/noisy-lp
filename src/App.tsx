@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { ArrowDown, Mail, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const BASE = (import.meta.env.BASE_URL ?? "/").replace(/\/+$/, "/");
+const BASE = (import.meta.env.BASE_URL ?? "/").replace(/\/+$/, "") + "/";
 const asset = (path: string) => `${BASE}${path.replace(/^\/+/, "")}`;
 
 const services = [
