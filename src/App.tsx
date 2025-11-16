@@ -7,6 +7,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { ArrowDown, Mail, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+const BASE = import.meta.env.BASE_URL ?? "/";
+const asset = (path: string) => `${BASE}${path.replace(/^\/+/, "")}`;
+
 const services = [
   "Branding",
   "Identidade visual",
@@ -19,20 +22,20 @@ const services = [
 ];
 
 const team = [
-  { name: "Estratégia", icon: "/assets/brand/icon-01.png" },
-  { name: "Conteúdo", icon: "/assets/brand/icon-02.png" },
-  { name: "Design", icon: "/assets/brand/icon-03.png" },
-  { name: "Audiovisual", icon: "/assets/brand/icon-04.png" },
-  { name: "Experiência", icon: "/assets/brand/icon-05.png" },
-  { name: "Performance", icon: "/assets/brand/icon-06.png" },
-  { name: "Tech", icon: "/assets/brand/icon-07.png" },
+  { name: "Estratégia", icon: "assets/brand/icon-01.png" },
+  { name: "Conteúdo", icon: "assets/brand/icon-02.png" },
+  { name: "Design", icon: "assets/brand/icon-03.png" },
+  { name: "Audiovisual", icon: "assets/brand/icon-04.png" },
+  { name: "Experiência", icon: "assets/brand/icon-05.png" },
+  { name: "Performance", icon: "assets/brand/icon-06.png" },
+  { name: "Tech", icon: "assets/brand/icon-07.png" },
 ];
 
 const backgroundWaves = [
-  { src: "/assets/brand/wave-01.png", className: "top-[-80px] left-[-60px]" },
-  { src: "/assets/brand/wave-02.png", className: "top-[20%] right-[-120px]" },
-  { src: "/assets/brand/wave-03.png", className: "bottom-[25%] left-[-90px]" },
-  { src: "/assets/brand/wave-04.png", className: "bottom-[-120px] right-[-60px]" },
+  { src: "assets/brand/wave-01.png", className: "top-[-80px] left-[-60px]" },
+  { src: "assets/brand/wave-02.png", className: "top-[20%] right-[-120px]" },
+  { src: "assets/brand/wave-03.png", className: "bottom-[25%] left-[-90px]" },
+  { src: "assets/brand/wave-04.png", className: "bottom-[-120px] right-[-60px]" },
 ];
 
 function App() {
@@ -55,7 +58,7 @@ function App() {
         {backgroundWaves.map((wave, index) => (
           <img
             key={wave.src}
-            src={wave.src}
+            src={asset(wave.src)}
             className={cn(
               "pointer-events-none absolute blur-sm md:blur-md mix-blend-screen",
               "w-72 md:w-96 lg:w-[520px]",
@@ -84,7 +87,7 @@ function App() {
           </div>
           <section className="mt-10 text-center flex flex-col items-center gap-6">
             <img
-              src="/assets/brand/logo.png"
+              src={asset("assets/brand/logo.png")}
               alt="Noisy"
               className="w-[260px] md:w-[320px] drop-shadow-glow"
             />
@@ -109,7 +112,7 @@ function App() {
         >
           <div className="flex flex-col items-center lg:items-start gap-6">
             <img
-              src="/assets/brand/make-some-noise.png"
+              src={asset("assets/brand/make-some-noise.png")}
               alt="Make some noise"
               className="w-64 md:w-80 drop-shadow-glow"
               loading="lazy"
@@ -166,7 +169,7 @@ function App() {
             </Card>
             <div className="flex flex-col items-center gap-4">
               <img
-                src="/assets/brand/globinho.png"
+                src={asset("assets/brand/globinho.png")}
                 alt="Globo Noisy"
                 className="w-48 md:w-60 drop-shadow-glow"
                 loading="lazy"
@@ -197,7 +200,7 @@ function App() {
               >
                 <div className="size-16 md:size-20 rounded-full overflow-hidden border border-primary/30">
                   <img
-                    src={member.icon}
+                    src={asset(member.icon)}
                     alt={member.name}
                     className="object-cover w-full h-full"
                     loading="lazy"
