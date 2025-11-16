@@ -13,12 +13,10 @@ const asset = (path: string) => `${BASE}${path.replace(/^\/+/, "")}`;
 const services = [
   "Branding",
   "Identidade visual",
-  "UX/UI",
-  "Campanhas 360°",
-  "Ativações",
   "Produto",
   "Eventos",
   "Produção audiovisual",
+  "Campanhas e ativações"
 ];
 
 const team = [
@@ -27,8 +25,6 @@ const team = [
   { name: "Design", icon: "assets/brand/icon-03.png" },
   { name: "Audiovisual", icon: "assets/brand/icon-04.png" },
   { name: "Experiência", icon: "assets/brand/icon-05.png" },
-  { name: "Performance", icon: "assets/brand/icon-06.png" },
-  { name: "Tech", icon: "assets/brand/icon-07.png" },
 ];
 
 const backgroundWaves = [
@@ -89,7 +85,7 @@ function App() {
             <img
               src={asset("assets/brand/logo.png")}
               alt="Noisy"
-              className="w-[260px] md:w-[320px] drop-shadow-glow"
+              className="w-[350px] md:w-[410px] drop-shadow-glow"
             />
             <Button
               size="lg"
@@ -118,10 +114,8 @@ function App() {
               loading="lazy"
             />
             <p className="text-lg leading-relaxed text-muted-foreground max-w-xl text-center lg:text-left">
-              A Noisy nasceu de uma paixão compartilhada por criar experiências
-              que marcam e despertam emoções. Somos um hub criativo que junta
-              estratégia, design, tecnologia e produção para transformar marcas
-              em manifestações inesquecíveis.
+              A Noisy nasceu de uma paixão compartilhada por criar experiências que marcam e despertam emoções. 
+              Somos uma agência criativa que junta estratégia, criatividade, planejamento e execução para transformar marcas em manifestações inesquecíveis.
             </p>
           </div>
           <Card className="bg-secondary/70 border-primary/40 backdrop-blur">
@@ -132,15 +126,7 @@ function App() {
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground">
               <p>
-                Amplificamos ideias e desenhamos narrativas que ressoam. Cada
-                projeto é um palco para a marca criar conexões profundas e
-                memoráveis com seu público.
-              </p>
-              <p>
-                Trabalhamos de forma colaborativa com os times internos para
-                descobrir oportunidades, prototipar rápido e entregar
-                experiências que brilham — seja numa campanha 360°, um produto
-                digital ou uma live inesquecível.
+                Viemos para fazer barulho e amplificar sua marca. Criamos experiências marcantes, cheias de energia, vibração e impacto.
               </p>
               <p className="font-clash text-soft">
                 Vamos juntos colocar sua marca no volume máximo.
@@ -175,7 +161,7 @@ function App() {
                 loading="lazy"
               />
               <p className="max-w-xs text-muted-foreground">
-                Conte com squads feitos sob medida para cada desafio.
+                Venha fazer barulho!
               </p>
             </div>
           </div>
@@ -183,16 +169,20 @@ function App() {
 
         <section className="max-w-6xl mx-auto px-6 md:px-10 py-12 space-y-10">
           <div className="flex flex-col items-center text-center gap-3">
-            <p className="uppercase text-xs tracking-[0.3rem] text-muted-foreground">
+            <p className="text-3xl font-display">
               Equipe
             </p>
+            <div>
+              <img
+                src={asset("assets/ELEMENTOS GRÁFICOS/organograma.png")}
+                alt={"organograma.png"}
+                className="object-cover w-full h-full"
+                loading="lazy"
+              />
+            </div>
             <h3 className="text-3xl font-display">Especialistas que fazem barulho</h3>
-            <p className="text-muted-foreground max-w-2xl">
-              Um coletivo multidisciplinar que combina estratégia, criatividade e
-              tecnologia para impulsionar cada entrega.
-            </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 justify-items-center">
+          <div className="flex flex-wrap justify-center gap-4 mx-auto max-w-4xl">
             {team.map((member) => (
               <div
                 key={member.name}
